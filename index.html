@@ -8,13 +8,19 @@
         body { 
             background: black; 
             display: flex; 
+            flex-direction: column; /* Arrange elements vertically */
             justify-content: center; 
             align-items: center; 
             height: 100vh; 
             margin: 0; 
+            color: white; /* Added for better visibility */
         }
         video { 
             width: 640px; 
+        }
+        .caption {
+            margin-top: 20px; /* Space between video and text */
+            text-align: center; /* Center the text */
         }
     </style>
 </head>
@@ -23,5 +29,8 @@
         <source src="https://cdn.discordapp.com/attachments/1350967294033006662/1351023545412485130/videoplayback.mp4?ex=67d8de3a&is=67d78cba&hm=441a5ebdaff94d9d1704a3d1afa29415f56c94f01cd9732676bc18508fdeed0f&" type="video/mp4"> <!-- Replace with your Discord CDN video link -->
         Your browser does not support the video tag.
     </video>
+    <div class="caption">
+        kb, seize, ran through all you nerds
+    </div>
 </body>
 </html>
