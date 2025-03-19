@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.profile-card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: scale(1.1);
+    z-index: 1; /* Bring hovered card to the front */
+}
+
+.profile-img {
+    background-size: cover;
+    background-position: center;
+    width: 100%; /* Set width to 100% */
+    height: 100%; /* Set height to 100% */
+    /* Removed border-radius for square images */
+}
+
+.profile-info {
+    position: absolute;
+    bottom: -100%; /* Hide the info by default */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: transparent; /* Make background completely transparent */
+    border: none; /* Make sure there are no borders */
+    color: black; /* Ensure text color is visible */
+    transition: bottom 0.3s ease;
+}
+
+.profile-card:hover .profile-info {
+    bottom: 0; /* Show the info on hover */
+}
+
+.name {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #666; /* Lighter color for description */
+}
