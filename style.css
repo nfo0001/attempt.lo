@@ -1,70 +1,53 @@
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Light gray background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: black;
+    color: white;
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-.profile-card {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
+.video-player {
+    width: 80%;
+    max-width: 800px;
+    border: 2px solid white;
 }
 
-.profile-card:hover {
-    transform: scale(1.1);
-    z-index: 1; /* Bring hovered card to the front */
-}
-
-.profile-img {
-    background-size: cover;
-    background-position: center;
-    width: 100%; /* Set width to 100% */
-    height: 100%; /* Set height to 100% */
-    /* Removed border-radius for square images */
-}
-
-.profile-info {
-    position: absolute;
-    bottom: -100%; /* Hide the info by default */
-    left: 0;
-    width: 100%;
+.text-input {
+    margin-top: 20px;
     text-align: center;
-    background-color: transparent; /* Make background completely transparent */
-    border: none; /* Make sure there are no borders */
-    color: black; /* Ensure text color is visible */
-    transition: bottom 0.3s ease;
 }
 
-.profile-card:hover .profile-info {
-    bottom: 0; /* Show the info on hover */
+textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    background-color: #333;
+    color: white;
+    resize: none;
 }
 
-.name {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
 }
 
-.description {
-    font-size: 0.9rem;
-    color: #666; /* Lighter color for description */
+button:hover {
+    background-color: #777;
+}
+
+#text-output {
+    margin-top: 10px;
 }
