@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>dead</title>
+    <style>
+        body { 
+            background: black; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+        video { 
+            width: 640px; 
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <video controls class="video-player">
-            <source src="your-video-file.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="text-input">
-            <textarea id="user-input" placeholder="Write something..."></textarea>
-            <button onclick="submitText()">Submit</button>
-            <div id="text-output"></div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+    <video controls>
+        <source src="https://cdn.discordapp.com/attachments/1350967294033006662/1351023545412485130/videoplayback.mp4?ex=67d8de3a&is=67d78cba&hm=441a5ebdaff94d9d1704a3d1afa29415f56c94f01cd9732676bc18508fdeed0f&" type="video/mp4"> <!-- Replace with your Discord CDN video link -->
+        Your browser does not support the video tag.
+    </video>
 </body>
 </html>
