@@ -1,76 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATTEMPT.LOL</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Additional styles for the video background */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .video-background {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1; /* Put video behind everything */
-            transform: translateX(-50%) translateY(-50%);
-        }
-        
-        .container {
-            position: relative; /* Ensure the container is positioned relative for content */
-            z-index: 1; /* Put the container above the background video */
-        }
-    </style>
+    <title>Video Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Background video using Discord CDN link without muted attribute -->
-    <video class="video-background" autoplay loop>
-        <source src="https://cdn.discordapp.com/attachments/1281438263625646283/1351737190383620208/videoplayback.mp4?ex=67db76dc&is=67da255c&hm=f8c4c0fb89d01c6697caf67dff917a75f74187b9de50a286bce10341ace1647a&" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
     <div class="container">
-        <div class="profile-card">
-            <div class="profile-img" style="background-image: url('seized.jpg');"></div>
-            <div class="profile-info">
-                <h2 class="name">seize</h2>
-                <p class="description">Web Developer</p>
-            </div>
-        </div>
-        <div class="profile-card">
-            <div class="profile-img" style="background-image: url('kb.gif');"></div>
-            <div class="profile-info">
-                <h2 class="name">kb</h2>
-                <p class="description"></p>
-            </div>
-        </div>
-        <div class="profile-card">
-            <div class="profile-img" style="background-image: url('profile3.jpg');"></div>
-            <div class="profile-info">
-                <h2 class="name">entryones</h2>
-                <p class="description"></p>
-            </div>
-        </div>
-        <div class="profile-card">
-            <div class="profile-img" style="background-image: url('profile4.jpg');"></div>
-            <div class="profile-info">
-                <h2 class="name">sile</h2>
-                <p class="description"></p>
-            </div>
+        <video controls class="video-player">
+            <source src="your-video-file.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="text-input">
+            <textarea id="user-input" placeholder="Write something..."></textarea>
+            <button onclick="submitText()">Submit</button>
+            <div id="text-output"></div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
-
 </html>
