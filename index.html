@@ -15,39 +15,6 @@
             margin: 0; 
             color: white; /* For better visibility */
             overflow: hidden; /* Prevent scrollbar due to snowflakes */
-        }
-        video { 
-            width: 640px; 
-        }
-        .caption {
-            margin-top: 20px; /* Space between video and text */
-            text-align: center; /* Center the text */
-            font-size: 24px; /* Adjust the font size to make it bigger */
-        }
-        .ip-address {
-            margin-top: 10px; /* Space between IP address and other content */
-            font-size: 20px; /* Adjust font size */
-            white-space: nowrap;  /* Prevent line breaks */
-            overflow: hidden;     /* Ensures the text doesn't overflow */
-            max-width: 100%;      /* Limit to the full width of the screen */
-            border-right: 2px solid white; /* Cursor effect */
-        }
-
-        /* Snowflake styles */
-        .snowflake {
-            position: absolute;
-            top: -10px; /* Start above the visible area */
-            color: white;
-            font-size: 1em; /* Initial size */
-            opacity: 0.8;
-            pointer-events: none; /* Prevents mouse events */
-            animation: fall linear infinite;
-        }
-
-        @keyframes fall {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(100vh); }
-        }
     </style>
 </head>
 <body>
@@ -58,45 +25,3 @@
     <div class="caption">
         #389
     </div>
-    <div class="ip-address" id="ip"></div> <!-- Placeholder for the IP address -->
-
-    <script>
-        // Fetch the user's IP address
-        fetch('https://api.ipify.org?format=json')
-            .then(response => response.json())
-            .then(data => {
-                const ipElement = document.getElementById('ip');
-                ipElement.innerText = `Your IP Address: ${data.ip}`;
-            })
-            .catch(error => {
-                console.error('Error fetching IP address:', error);
-                document.getElementById('ip').innerText = 'Unable to retrieve IP address.';
-            });
-
-        // Function to create snowflakes
-        function createSnowflakes() {
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-            snowflake.innerText = '❄'; // Snowflake symbol
-
-            // Randomize position
-            snowflake.style.left = Math.random() * window.innerWidth + 'px';
-            snowflake.style.fontSize = Math.random() * 20 + 10 + 'px'; // Random size between 10px and 30px
-
-            document.body.appendChild(snowflake);
-
-            // Set a random duration for the falling animation
-            const fallDuration = Math.random() * 3 + 2; // Random duration between 2s and 5s
-            snowflake.style.animationDuration = fallDuration + 's';
-
-            // Remove the snowflake after it falls
-            snowflake.addEventListener('animationend', () => {
-                snowflake.remove();
-            });
-        }
-
-        // Create snowflakes at set intervals
-        setInterval(createSnowflakes, 300); // Create a new snowflake every 300ms
-    </script>
-
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5
