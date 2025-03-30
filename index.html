@@ -20,16 +20,31 @@
         .message {
             font-size: 2em;
             text-align: center;
+            margin-top: 20px;
         }
         .sub-message {
             font-size: 1.5em;
             margin-top: 10px;
             color: gray; /* Changed to gray */
         }
+        .video-container {
+            text-align: center;
+        }
+        video {
+            width: 80%; /* You can adjust this percentage to change size */
+            max-width: 600px; /* Max width for larger screens */
+            border: 2px solid white; /* Optional: for styling */
+        }
     </style>
 </head>
 <body>
-    <div class="message">real ones know who they are</div>
-    <div class="sub-message">- kb, perks, district</div>
+    <div class="video-container">
+        <video controls>
+            <source src="https://cdn.discordapp.com/attachments/1304846717463560294/1355711848548274256/y2mate.com_-_Juice_WRLD_Both_Ways_Official_Video_720pHF.mp4?ex=67e9ec8c&is=67e89b0c&hm=6c7f1ea3525cc71fcb36bf3a8958f7a15ded31da9367b84a5a48fb4af9c111b2&" type="video/mp4"> <!-- Replace with your video file -->
+            Your browser does not support the video tag.
+        </video>
+        <div class="message">real ones know who they are</div>
+        <div class="sub-message">- seize, kb, perks, district</div>
+    </div>
 </body>
 </html>
